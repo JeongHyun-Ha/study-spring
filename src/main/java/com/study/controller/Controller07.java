@@ -57,6 +57,16 @@ public class Controller07 {
 
     @RequestMapping("sub6")
     public String method6() {
-        return "/main7/sub6";
+        return null;
+    }
+
+    @RequestMapping("sub7")
+    public void method7() {
+
+    }
+
+    @RequestMapping("sub8")
+    public void method8() {
+        System.out.println("Controller07.method8");
     }
 }
