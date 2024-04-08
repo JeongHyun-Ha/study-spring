@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Arrays;
+
 @Controller
 @RequestMapping("main6")
 public class Controller06 {
@@ -67,9 +69,23 @@ public class Controller06 {
         System.out.println("city = " + city);
     }
 
+    // 메소드 Argument 타입이 기본타입(Wrapper 포함), String 이면
+    // @Request 로 간주함.
     @RequestMapping("sub7")
     public void method7(String name, Integer age) {
         System.out.println("name = " + name);
         System.out.println("age = " + age);
+    }
+
+    @RequestMapping("sub8")
+    public void method8(String name, String[] address) {
+        System.out.println("name = " + name);
+        System.out.println("address = " + Arrays.toString(address));
+    }
+
+    @RequestMapping("sub9")
+    public void method9(String[] city, Integer[] age) {
+        System.out.println("city = " + Arrays.toString(city));
+        System.out.println("age = " + Arrays.toString(age));
     }
 }
