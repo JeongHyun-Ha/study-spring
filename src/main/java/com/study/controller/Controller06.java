@@ -50,6 +50,22 @@ public class Controller06 {
     // /main6/sub5?city=busan
     // /main6/sub5?address=강남
     // todo: method5 작성
+    @RequestMapping("sub5")
+    public void method5(@RequestParam(required = false) String address,
+                        @RequestParam(required = false) String city) {
+        System.out.println("address = " + address);
+        System.out.println("city = " + city);
+    }
+
+    // /main6/sub6?address=강남&city=서울
+    // /main6/sub6?address=신촌
+    // /main6/sub6?city=부산
+    @RequestMapping("sub6")
+    public void method6(String address, // required 는 false
+                        String city) {
+        System.out.println("address = " + address);
+        System.out.println("city = " + city);
+    }
 
     @RequestMapping("sub7")
     public void method7(String name, Integer age) {
