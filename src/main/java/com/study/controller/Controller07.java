@@ -27,4 +27,36 @@ public class Controller07 {
         response.setContentType("text/html;charset=utf-8");
         response.getWriter().println(result);
     }
+
+    // /main7/sub2
+    @RequestMapping("sub2")
+    public String method2() {
+        // 요청 정보 분석|가공
+        // 비즈니스 로직 처리
+        // 결과를 모델에 담기
+        // View 로 포워딩(View 이름 리턴)
+
+        return "view1";
+    }
+
+    @RequestMapping("sub3")
+    public String method3() {
+        return "view2";
+        // /WEB-INF/jsp/view2.jsp
+    }
+
+    @RequestMapping("sub4")
+    public String method4() {
+        return "view3";
+    }
+
+    @RequestMapping("sub5")
+    public String method5() {
+        return "/main7/sub5";
+    }
+
+    @RequestMapping("sub6")
+    public String method6() {
+        return "/main7/sub6";
+    }
 }
