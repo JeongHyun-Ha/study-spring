@@ -38,7 +38,7 @@
 <p>"11" < "2" : ${"11"<"2"}</p>
 <p>11 < 2 : ${11 < 2}</p>
 <p>11 < "2" : ${11 < "2"} (수와 수가 아닌 것으로 연산하면 수로 바뀜)</p>
-<h3>논리연산(&&, ||)</h3>
+<h3>논리연산(&&, ||, !)</h3>
 <p>true && true : ${true && true}</p>
 <p>true && false : ${true && false}</p>
 <p>false && true : ${false && true}</p>
@@ -49,6 +49,8 @@
 <p>false || false : ${false || false}</p>
 <p>true and true : ${true and true}</p>
 <p>true or false : ${true or false}</p>
+<p>! true : ${! true}</p>
+<p>not true : ${not true}</p>
 <h3>삼항연산자</h3>
 <p>true ? "hello" : "world" > ${true ? "hello" : "world"}</p>
 <p>false ? "hello" : "world" > ${false ? "hello" : "world"}</p>
