@@ -32,4 +32,11 @@ public class Controller12 {
 //                Map.of("country", "korea",
 //                        "age", 15));
     }
+
+    @RequestMapping("sub2")
+    public void method2(Model model) {
+        model.addAttribute("age", 3);
+//        model.addAttribute("age", 15);
+//        model.addAttribute("age", 30);
+    }
 }
