@@ -4,6 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 @Controller
 @RequestMapping("main8")
 public class Controller08 {
@@ -49,5 +53,39 @@ public class Controller08 {
         model.addAttribute("countries",
                 new String[]{"한국", "미국", "케냐"});
 
+    }
+
+    @RequestMapping("sub6")
+    public void method6(Model model) {
+        List<String> data = List.of("java", "css", "html", "jsp");
+        model.addAttribute("myList", data);
+    }
+
+    @RequestMapping("sub7")
+    public void method7(Model model) {
+        List<String> data = List.of("😂", "👍", "🙌");
+        model.addAttribute("myList", data);
+
+        List<Integer> numbers = List.of(10, 5, 0);
+        model.addAttribute("yourList", numbers);
+    }
+
+    @RequestMapping("sub8")
+    public void method8(Model model) {
+        List<Double> nums = List.of(500.0, 3.14);
+        model.addAttribute("numbers", nums);
+
+        List<String> cities = List.of("서울", "런던", "뉴욕");
+        model.addAttribute("cities", cities);
+    }
+
+    @RequestMapping("sub9")
+    public void method9(Model model) {
+        Map<String, String> map = new HashMap<>();
+        map.put("name", "흥민");
+        map.put("age", "30");
+        map.put("address", "런던");
+
+        model.addAttribute("myMap", map);
     }
 }
