@@ -39,4 +39,9 @@ public class Controller12 {
 //        model.addAttribute("age", 15);
 //        model.addAttribute("age", 30);
     }
+
+    @RequestMapping("sub3")
+    public void method3(Model model) {
+        model.addAttribute("dan", 5);
+    }
 }
