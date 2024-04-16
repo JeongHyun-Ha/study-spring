@@ -5,10 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-<c:if test="${param.status eq 'fail'}">
-    <p>로그인 실패</p>
+<c:if test="${not empty message}">
+    <div>${message}</div>
 </c:if>
-<form action="/main22/sub6" method="post">
+<form action="/main22/sub14" method="post">
     <div>
         id
         <input type="text" name="id">

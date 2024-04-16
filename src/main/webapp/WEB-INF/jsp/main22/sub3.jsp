@@ -5,6 +5,9 @@
     <title>Title</title>
 </head>
 <body>
+<c:if test="${param.status eq 'fail'}">
+    <div>아이디와 패스워드를 확인하세요.</div>
+</c:if>
 <form action="/main22/sub4" method="post">
     <div>
         id
